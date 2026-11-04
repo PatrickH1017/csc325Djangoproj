@@ -16,3 +16,9 @@ class MyAppViewsTests(SimpleTestCase):
         self.assertContains(response, 'About Page')
         self.assertContains(response, 'This is the about page of my Django application.')
 
+    def test_story_page_returns_expected_content(self):
+        response = self.client.get(reverse('story'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Story Page')
+        self.assertContains(response, 'This is the story page of my Django application.')
