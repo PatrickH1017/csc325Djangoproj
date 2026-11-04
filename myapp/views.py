@@ -8,3 +8,6 @@ def home(request):
 
 def about(request):
     return HttpResponse("<h1>About Page</h1><p>This is the about page of my Django application.</p>")
+
+def story(request):
+    return HttpResponse("<h1>Story Page</h1><p>This is the story page of my Django application.</p>")
